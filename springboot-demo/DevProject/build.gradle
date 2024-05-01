@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.4'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.demo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-devtools')
+
+    // REST API 문서화 swagger
+    implementation('io.springfox:springfox-swagger2:2.4.0')
+    implementation('io.springfox:springfox-swagger-ui:2.4.0')
+
+    // xml 데이터 바인딩을 위한 라이브러리
+    implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml')
+
+    // validation 스타터
+    implementation('org.springframework.boot:spring-boot-starter-validation')
+
+    // 입력값 유효성 검증을 위한 라이브러리
+//    implementation('org.hibernate:hibernate-validator')
+
+    compileOnly('org.projectlombok:lombok')
+    annotationProcessor('org.projectlombok:lombok')
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}
