@@ -22,8 +22,6 @@ public class CleanController {
 
     private final CleanCRUDService cleanCRUDService;
 
-    private final SampleService sampleService;
-
     @GetMapping(value = "/clean")
     public ResponseEntity<CommonResponse> clean(){
         CommonResponse commonResponse = CommonResponse.builder()
