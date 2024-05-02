@@ -24,5 +24,4 @@ public class CleanDataForm {
                 .name(name)
                 .build();
     }
-
 }
