@@ -5,6 +5,8 @@
     <select id="getList" parameterType="com.demo.clean.domain.Clean" resultType="com.demo.clean.domain.Clean">
         select host as id
              , user as name
+             , 'xxx' as contents
+             , 'yyy' as title
           from user
          where user = #{name}
     </select>
