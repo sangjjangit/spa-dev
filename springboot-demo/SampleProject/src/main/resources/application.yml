@@ -1,0 +1,23 @@
+logging:
+  level:
+    root: info
+    jdbc:
+      sqlonly: info
+      sqltiming: info
+      resultsettable: info
+      audit: info
+      resultset: info
+      connection: info
+
+spring:
+  application:
+    name: SampleApplication
+
+  datasource:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql
+    username: root
+    password: 1111
+
+mybatis:
+  mapper-locations: mapper/**/*.xml

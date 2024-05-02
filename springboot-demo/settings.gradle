@@ -1,3 +1,4 @@
 rootProject.name = 'springboot-demo'
 include 'DevProject'
+include 'SampleProject'
 

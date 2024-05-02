@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.demo.clean.domain.CleanRepository">
+    <select id="getList" parameterType="com.demo.clean.domain.Clean" resultType="com.demo.clean.domain.Clean">
+        select host as id
+             , user as name
+          from user
+         where user = #{name}
+    </select>
+    <update id="save" parameterType="com.demo.clean.domain.Clean">
+        update user
+           set user = 'root'
+         where user = 'root'
+    </update>
+</mapper>
