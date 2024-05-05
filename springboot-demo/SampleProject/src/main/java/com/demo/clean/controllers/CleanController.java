@@ -36,7 +36,7 @@ public class CleanController {
         log.info("list cleanDataForm: {}", cleanDataForm);
         log.info("list cleanDataForm.toCondition(): {}", cleanDataForm.toCondition());
 
-        List<Clean> cleanList = cleanCRUDService.getList(cleanDataForm.toCondition());
+        List<Clean> cleanList = cleanCRUDService.getList(cleanDataForm);
 
         log.info("list cleanList: {}", cleanList);
 
@@ -54,11 +54,11 @@ public class CleanController {
         log.info("save cleanDataForm: {}", cleanDataForm);
 
 //        Clean clean = cleanCRUDService.save(cleanDataForm.toClean());
-        Clean clean = cleanDataForm.toClean();
-        int i = cleanCRUDService.save(clean);
+//        Clean clean = cleanDataForm.toClean();
+        int i = cleanCRUDService.save(cleanDataForm);
         log.info("save i: {}", i);
 
-        List<Clean> resultList = cleanCRUDService.getList(clean);
+        List<Clean> resultList = cleanCRUDService.getList(cleanDataForm);
 
         CommonResponse commonResponse = CommonResponse.builder()
                 .message("SUCCESS")

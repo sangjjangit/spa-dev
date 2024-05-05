@@ -9,6 +9,9 @@ logging:
       resultset: info
       connection: info
 
+server:
+  port: 9001
+
 spring:
   application:
     name: SampleApplication

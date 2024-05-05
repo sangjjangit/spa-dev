@@ -6,11 +6,12 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Clean {
     private String id;
     private String name;
+    private String user;
 
     private String contents;
     private String title;

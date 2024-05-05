@@ -11,6 +11,7 @@ import lombok.ToString;
 public class CleanDataForm {
     private String id;
     private String name;
+    private String contents;
 
     public Clean toCondition(){
         return Clean.builder()
@@ -22,6 +23,7 @@ public class CleanDataForm {
         return Clean.builder()
                 .id(id)
                 .name(name)
+                .contents(contents)
                 .build();
     }
 }
